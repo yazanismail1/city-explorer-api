@@ -15,7 +15,7 @@ server.get('/',(req,res)=>{
 //http:localhost:PORT/weatherData?lon=lon&lat=lat
 server.get('/weatherData', getWeatherDataFunction);
 
-//http:localhost:PORT/movieData?query=cityName
+//http:localhost:PORT/movie?cityName=cityName
 server.get('/movie', getMovieDataFunction);
 
 // Wrong entry route
