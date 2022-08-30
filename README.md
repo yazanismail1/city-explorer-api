@@ -1,11 +1,11 @@
 # city-explorer-api
 
 **Author**: Yazan Alfarra
-**Version**: 1.0.0
+**Version**: 2.0.0
 
 ## Overview
 
-It is a custom API contains the data for three cities and their crossponding weather conditions retrieved from old data.
+Server to fetch data from external APIs.
 
 ## Getting Started
 
@@ -15,10 +15,11 @@ It is a custom API contains the data for three cities and their crossponding wea
 
 ## Architecture
 
-![Methodology and Work Flow](./workFlow.png)
+![Methodology and Work Flow](./lab08.png)
 
 ## Change Log
 
+30-08-2022 10:00pm - Application now has a fully-functional express server, capable of fetching data from external APIs.
 29-08-2022 2:12am - Application now has a fully-functional express server, with a GET route for the location resource.
 
 ## Credit and Collaborations
@@ -27,12 +28,12 @@ It is a custom API contains the data for three cities and their crossponding wea
 
 ## Time Estimates
 
-**Name of feature :** Express Server/API
+**Name of feature :** Express Server
 
-**Estimate of time needed to complete :** 5 hours
+**Estimate of time needed to complete :** 4 hours
 
-**Start time :** 3:00pm
+**Start time :** 6:00pm
 
-**Finish time :** 2:13am
+**Finish time :** 10:00pm
 
-**Actual time needed to complete :** 11 hours
+**Actual time needed to complete :** 4 hours
