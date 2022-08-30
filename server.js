@@ -35,7 +35,7 @@ server.listen(PORT, () => {
 
 class WeatherData {
     constructor(item){
-        this.title = item.datetime;
+        this.datetime = item.datetime;
         this.low_temp = item.low_temp;
         this.max_temp = item.max_temp;
         this.description = item.weather.description;
