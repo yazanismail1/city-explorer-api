@@ -15,7 +15,7 @@ Server to fetch data from external APIs.
 
 ## Architecture
 
-![Methodology and Work Flow](./lab08.png)
+![Methodology and Work Flow](./lab09.png)
 
 ## Change Log
 
