@@ -1,4 +1,6 @@
 const axios = require('axios');
+const myStorage = {};
+
 
 //----- FUNCTIONS -----//
 
@@ -7,15 +9,21 @@ const axios = require('axios');
 async function getMovieDataFunction(req,res) {
     const cityName = req.query.cityName;
     const URL = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_KEY}&language=en-US&query=${cityName}&page=1&include_adult=false`;
-    
-    axios.get(URL).then( result => {
-        let sendData = result.data.results.map( item => {
-            return new MovieData(item);
+    if (myStorage[cityName]){
+        console.log("I have the data!")
+        res.status(200).send(myStorage[cityName]);
+    }else {
+        axios.get(URL).then( result => {
+            let sendData = result.data.results.map( item => {
+                return new MovieData(item);
+            })
+            myStorage[cityName] = sendData;
+            console.log("I don't have the data!")
+            return res.status(200).send(sendData);
+        }).catch(error => {
+            return res.status(404).send(error)
         })
-        return res.status(200).send(sendData);
-    }).catch(error => {
-        return res.status(404).send(error)
-    })
+    }
 }
 
 
